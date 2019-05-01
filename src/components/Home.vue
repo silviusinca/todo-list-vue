@@ -39,8 +39,18 @@ export default {
         return todoToDelete != todo
       })
     },
-    editTodo () {
-      console.log('it works!')
+    // experimenting 
+    // -> might add a different way of editing when i'll found a better solution
+    editTodo (todoToEdit) {
+      /*
+      let index = this.todos.indexOf(this.todo)
+      this.todo = todoToEdit
+      this.todos = this.todos.filter(i => {
+        return this.todos.indexOf(i) != index
+      })
+      */
+      this.todo = todoToEdit
+      this.deleteTodo(this.todo)
     }
   }
 }
